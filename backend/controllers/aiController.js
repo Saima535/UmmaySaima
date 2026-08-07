@@ -19,9 +19,9 @@ const genAI = process.env.GEMINI_API_KEY
   : null;
 
 const DEFAULT_AI_SETTINGS = {
-  assistantName: 'RAI',
-  assistantSubtitle: "Rizvi's personalized AI",
-  primaryGoal: 'Help recruiters, hiring managers, and collaborators evaluate Shah Mohammad Rizvi accurately.',
+  assistantName: 'SUAI',
+  assistantSubtitle: "Ummay Saima's personalized AI",
+  primaryGoal: 'Help recruiters, hiring managers, and collaborators evaluate Ummay Saima accurately.',
   currentRole: '',
   location: '',
   opportunityFocus: '',
@@ -38,7 +38,7 @@ const DEFAULT_AI_SETTINGS = {
     'Use the knowledge base as the source of truth. Do not invent roles, achievements, dates, links, metrics, or claims. If information is missing, say so clearly. Keep answers concise by default. Avoid markdown formatting such as headings, bold, italics, or code fences. For lists, use plain-text bullets starting with "-".',
   additionalKnowledge: '',
   fallbackReply:
-    "I'm currently updating my knowledge base. Please check Rizvi's profile sections or contact details for the latest information.",
+    "I'm currently updating my knowledge base. Please check Ummay Saima's profile sections or contact details for the latest information.",
 };
 
 const normalizeString = (value, maxLength = 5000) => String(value ?? '').trim().slice(0, maxLength);
