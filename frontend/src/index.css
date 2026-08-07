@@ -5,20 +5,20 @@
 @tailwind utilities;
 
 :root {
-  --bg-start-rgb: 62 79 53;
-  --bg-mid-rgb: 42 56 42;
-  --bg-end-rgb: 18 56 63;
-  --glow-primary-rgb: 176 198 133;
-  --glow-secondary-rgb: 92 192 196;
-  --accent-100-rgb: 241 249 240;
-  --accent-200-rgb: 197 234 216;
-  --accent-300-rgb: 129 206 183;
-  --accent-400-rgb: 88 176 149;
-  --secondary-100-rgb: 236 242 219;
-  --secondary-200-rgb: 177 228 221;
-  --secondary-300-rgb: 102 193 186;
-  --glass-surface-rgb: 21 31 40;
-  --glass-surface-strong-rgb: 18 27 36;
+  --bg-start-rgb: 10 6 12;
+  --bg-mid-rgb: 20 10 20;
+  --bg-end-rgb: 7 6 10;
+  --glow-primary-rgb: 236 72 153;
+  --glow-secondary-rgb: 244 114 182;
+  --accent-100-rgb: 253 242 248;
+  --accent-200-rgb: 251 207 232;
+  --accent-300-rgb: 244 114 182;
+  --accent-400-rgb: 236 72 153;
+  --secondary-100-rgb: 255 228 240;
+  --secondary-200-rgb: 249 168 212;
+  --secondary-300-rgb: 190 24 93;
+  --glass-surface-rgb: 16 11 20;
+  --glass-surface-strong-rgb: 10 7 14;
   background: rgb(var(--bg-start-rgb));
   color: #e2e8f0;
   scroll-behavior: smooth;
@@ -37,10 +37,10 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   background:
-    radial-gradient(circle at 16% 10%, rgb(var(--glow-primary-rgb) / 0.2), transparent 28%),
-    radial-gradient(circle at 86% 18%, rgb(var(--secondary-100-rgb) / 0.08), transparent 24%),
-    radial-gradient(circle at 52% 112%, rgb(var(--glow-secondary-rgb) / 0.18), transparent 34%),
-    linear-gradient(180deg, rgb(var(--bg-start-rgb)) 0%, rgb(var(--bg-mid-rgb)) 42%, rgb(var(--bg-end-rgb)) 100%);
+    radial-gradient(circle at 14% 12%, rgb(var(--glow-primary-rgb) / 0.24), transparent 28%),
+    radial-gradient(circle at 84% 16%, rgb(var(--secondary-100-rgb) / 0.08), transparent 22%),
+    radial-gradient(circle at 52% 112%, rgb(var(--glow-secondary-rgb) / 0.16), transparent 34%),
+    linear-gradient(180deg, rgb(var(--bg-start-rgb)) 0%, rgb(var(--bg-mid-rgb)) 46%, rgb(var(--bg-end-rgb)) 100%);
 }
 
 body::before,
@@ -95,14 +95,14 @@ body::after {
 
   .zone-olive {
     background:
-      radial-gradient(circle at 12% 18%, rgb(var(--glow-primary-rgb) / 0.14), transparent 30%),
-      linear-gradient(180deg, rgb(49 66 42 / 0.78), rgb(34 46 34 / 0.68));
+      radial-gradient(circle at 12% 18%, rgb(var(--glow-primary-rgb) / 0.16), transparent 30%),
+      linear-gradient(180deg, rgb(29 15 27 / 0.84), rgb(12 9 16 / 0.82));
   }
 
   .zone-blue {
     background:
-      radial-gradient(circle at 88% 12%, rgb(var(--glow-secondary-rgb) / 0.14), transparent 28%),
-      linear-gradient(180deg, rgb(22 39 55 / 0.7), rgb(12 25 39 / 0.84));
+      radial-gradient(circle at 88% 12%, rgb(var(--glow-secondary-rgb) / 0.16), transparent 28%),
+      linear-gradient(180deg, rgb(22 11 24 / 0.82), rgb(8 7 12 / 0.9));
   }
 
   .section-shell::before {
@@ -173,11 +173,11 @@ body::after {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b1220;
+  background: #0b0710;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #6b214f;
   border-radius: 10px;
 }
 
