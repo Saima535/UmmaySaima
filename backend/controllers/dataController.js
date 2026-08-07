@@ -216,8 +216,8 @@ const serializeIntroduction = (item) => {
 };
 
 const DEFAULT_HERO_CONTENT = {
-  availabilityText: 'Open to Entry-Level Software & AI/ML Roles',
-  roleTitles: ['AI/ML Engineer', 'Researcher', 'Full-Stack Developer', 'Founder, CollabCircle'],
+  availabilityText: 'Open to Entry-Level Full Stack Software Engineering & AI/ML Roles',
+  roleTitles: ['Full-Stack Software Engineer', 'AI/ML Enthusiast', 'Executive & Researcher @ CollabCircle'],
   summary:
     'Building production-grade intelligence systems from model design to deployment. I focus on computer vision, practical deep learning, and reliable web platforms that create measurable impact.',
 };
