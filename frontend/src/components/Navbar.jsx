@@ -44,7 +44,7 @@ const Navbar = () => {
           type="button"
           aria-label="Scroll to top"
         >
-          <img src="/saima.svg" alt="Saima mark" className="h-8 w-8 rounded-md border border-cyan-300/30 bg-slate-800/65 p-1" />
+          <img src="/Saima.svg" alt="Saima mark" className="h-8 w-8 rounded-md border border-cyan-300/30 bg-slate-800/65 p-1" />
           <div>
             <p className="text-[11px] uppercase tracking-[0.25em] text-cyan-300/80">Portfolio</p>
             <p className="font-serif text-lg text-slate-100 group-hover:text-cyan-200">Ummay Saima</p>
