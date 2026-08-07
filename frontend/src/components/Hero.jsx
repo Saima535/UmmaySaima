@@ -23,12 +23,12 @@ const Hero = () => {
       try {
         const { data } = await API.get('/data/hero');
         setContent({
-          availabilityText: data?.availabilityText || FALLBACK_HERO.availabilityText,
+          availabilityText: data?.availabilityText ?? FALLBACK_HERO.availabilityText,
           roleTitles:
             Array.isArray(data?.roleTitles) && data.roleTitles.length > 0
               ? data.roleTitles
               : FALLBACK_HERO.roleTitles,
-          summary: data?.summary || FALLBACK_HERO.summary,
+          summary: data?.summary ?? FALLBACK_HERO.summary,
         });
       } catch (error) {
         console.error('Failed to load hero content', error);
@@ -161,7 +161,7 @@ const Hero = () => {
           <div className="pointer-events-none absolute inset-4 rounded-[28px] bg-gradient-to-br from-cyan-300/15 via-transparent to-amber-200/10 blur-2xl" />
           <div className="glass-card card-sheen animate-float overflow-hidden border-cyan-300/20 p-3">
             <img
-              src="/saima.jpeg"
+              src="/Saima.jpeg"
               alt="Ummay Saima"
               className="aspect-[4/5] w-full rounded-xl object-cover"
               loading="eager"

@@ -45,10 +45,10 @@ const About = () => {
       try {
         const { data } = await API.get('/data/introduction');
         setContent({
-          introLabel: data?.introLabel || FALLBACK_ABOUT.introLabel,
-          headingPrimary: data?.headingPrimary || FALLBACK_ABOUT.headingPrimary,
-          headingAccent: data?.headingAccent || FALLBACK_ABOUT.headingAccent,
-          description: data?.description || FALLBACK_ABOUT.description,
+          introLabel: data?.introLabel ?? FALLBACK_ABOUT.introLabel,
+          headingPrimary: data?.headingPrimary ?? FALLBACK_ABOUT.headingPrimary,
+          headingAccent: data?.headingAccent ?? FALLBACK_ABOUT.headingAccent,
+          description: data?.description ?? FALLBACK_ABOUT.description,
           highlights: Array.isArray(data?.highlights) && data.highlights.length > 0
             ? data.highlights
             : FALLBACK_ABOUT.highlights,
@@ -88,7 +88,7 @@ const About = () => {
           >
             <div className="glass-card card-sheen overflow-hidden border-cyan-300/20 p-3">
               <img
-                src="/saima.jpeg"
+                src="/Saima.jpeg"
                 alt="Ummay Saima portrait"
                 className="aspect-[4/5] w-full rounded-xl object-cover"
                 loading="lazy"

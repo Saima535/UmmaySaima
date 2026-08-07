@@ -51,16 +51,16 @@ const Contact = () => {
 
           <div className="mt-8 space-y-4 text-sm text-slate-300">
             <a
-              href="mailto:smri29.ml@gmail.com"
+              href="mailto:ummay1351@gmail.com"
               className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/35 px-4 py-3 transition hover:-translate-y-0.5 hover:border-cyan-300/40 hover:text-cyan-200"
             >
               <Mail size={16} className="text-cyan-300" />
-              smri29.ml@gmail.com
+              ummay1351@gmail.com
             </a>
 
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://www.linkedin.com/in/smri29"
+                href="https://www.linkedin.com/in/ummay-saima/"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-2xl border border-white/10 bg-slate-900/35 p-3 transition hover:-translate-y-0.5 hover:border-cyan-300/40 hover:text-cyan-200"
@@ -69,7 +69,7 @@ const Contact = () => {
                 <Linkedin size={18} />
               </a>
               <a
-                href="https://github.com/smri29"
+                href="https://github.com/Saima535"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-2xl border border-white/10 bg-slate-900/35 p-3 transition hover:-translate-y-0.5 hover:border-cyan-300/40 hover:text-cyan-200"

@@ -185,22 +185,35 @@ const DEFAULT_INTRODUCTION = {
   ],
 };
 
-const serializeIntroduction = (item) => ({
-  introLabel: item?.introLabel || DEFAULT_INTRODUCTION.introLabel,
-  headingPrimary: item?.headingPrimary || DEFAULT_INTRODUCTION.headingPrimary,
-  headingAccent: item?.headingAccent || DEFAULT_INTRODUCTION.headingAccent,
-  description: item?.description || DEFAULT_INTRODUCTION.description,
-  highlights: (Array.isArray(item?.highlights) ? item.highlights : DEFAULT_INTRODUCTION.highlights)
-    .map((highlight, index) => ({
-      _id: highlight._id,
-      title: highlight.title || '',
-      detail: highlight.detail || '',
-      iconKey: highlight.iconKey || 'education',
-      order: highlight.order ?? index,
-    }))
-    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0)),
-  updatedAt: item?.updatedAt,
-});
+const serializeIntroduction = (item) => {
+  if (!item) {
+    return {
+      ...DEFAULT_INTRODUCTION,
+      highlights: DEFAULT_INTRODUCTION.highlights.map((highlight, index) => ({
+        ...highlight,
+        order: highlight.order ?? index,
+      })),
+      updatedAt: null,
+    };
+  }
+
+  return {
+    introLabel: item.introLabel ?? '',
+    headingPrimary: item.headingPrimary ?? '',
+    headingAccent: item.headingAccent ?? '',
+    description: item.description ?? '',
+    highlights: (Array.isArray(item.highlights) ? item.highlights : [])
+      .map((highlight, index) => ({
+        _id: highlight._id,
+        title: highlight.title ?? '',
+        detail: highlight.detail ?? '',
+        iconKey: highlight.iconKey || 'education',
+        order: highlight.order ?? index,
+      }))
+      .sort((a, b) => (a.order ?? 0) - (b.order ?? 0)),
+    updatedAt: item.updatedAt ?? null,
+  };
+};
 
 const DEFAULT_HERO_CONTENT = {
   availabilityText: 'Open to Entry-Level Software & AI/ML Roles',
@@ -209,15 +222,21 @@ const DEFAULT_HERO_CONTENT = {
     'Building production-grade intelligence systems from model design to deployment. I focus on computer vision, practical deep learning, and reliable web platforms that create measurable impact.',
 };
 
-const serializeHeroContent = (item) => ({
-  availabilityText: item?.availabilityText || DEFAULT_HERO_CONTENT.availabilityText,
-  roleTitles:
-    Array.isArray(item?.roleTitles) && item.roleTitles.length > 0
-      ? item.roleTitles.filter(Boolean)
-      : DEFAULT_HERO_CONTENT.roleTitles,
-  summary: item?.summary || DEFAULT_HERO_CONTENT.summary,
-  updatedAt: item?.updatedAt,
-});
+const serializeHeroContent = (item) => {
+  if (!item) {
+    return {
+      ...DEFAULT_HERO_CONTENT,
+      updatedAt: null,
+    };
+  }
+
+  return {
+    availabilityText: item.availabilityText ?? '',
+    roleTitles: Array.isArray(item.roleTitles) ? item.roleTitles.filter(Boolean) : [],
+    summary: item.summary ?? '',
+    updatedAt: item.updatedAt ?? null,
+  };
+};
 
 const serializeProject = (item) => ({
   _id: item._id,

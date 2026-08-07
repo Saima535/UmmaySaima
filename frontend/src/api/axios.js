@@ -1,7 +1,20 @@
 import axios from 'axios';
 
+const resolveBaseUrl = () => {
+  const configuredUrl = import.meta.env.VITE_API_URL?.trim();
+  if (configuredUrl) {
+    return configuredUrl;
+  }
+
+  if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+    return 'http://localhost:5000/api';
+  }
+
+  return 'https://ummaysaima.onrender.com/api';
+};
+
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: resolveBaseUrl(),
   timeout: 15000,
 });
 
